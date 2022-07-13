@@ -31,7 +31,7 @@ assignment.sumOfNumbers = sumOfNumbers;
  */
 function countEvenNumbers(arrayOfNumbers) {
     count = 0;
-    arrayOfNumbers.forEach((num)=>{count += num%2==0?1|0;});
+    arrayOfNumbers.forEach((num)=>{count += num%2==0?1:0;});
     return count;
 }
 assignment.countEvenNumbers = countEvenNumbers;
@@ -51,8 +51,9 @@ assignment.countEvenNumbers = countEvenNumbers;
  * @returns Array the converted temperatures in Fahrenheit
  */
 function celsiusToFahrenheit(arrayOfNumbers) {
-    return arrayOfNumbers.map((cel)=>{(cel * 9/5) + 32;});
+    return arrayOfNumbers.map((cel)=>Math.trunc((cel * 9/5) + 32));
 }
+
 assignment.celsiusToFahrenheit = celsiusToFahrenheit;
 
 
